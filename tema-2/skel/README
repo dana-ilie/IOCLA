@@ -1,0 +1,47 @@
+README - Ilie Dana Maria 324CA
+-------------------------------------------------------------------------------
+ROTP:
+
+In functia "rotp" se realizeaza implementarea One Time Pad cu cheie inversata. 
+Pentru a realiza acest lucru se efectueaza operatia XOR intre mesaj si cheia 
+inversata(ambele de lungime len declarată în section .data). Initial este mutata
+valoarea lungimii din registrul ecx in variabila len. Ulterior se realizeaza o
+parcurgere a textului pentru a efectua operatia de XOR dintre fiecare caracter
+din plaintext si caracterul corespondent din cheia inversata.
+Parcurgerea textului presupune folosirea unui salt conditionat la eticheta
+"repeat". 
+
+-------------------------------------------------------------------------------
+AGES:
+
+Functia "ages" calculeaza toate varstele pentru fiecare data din vectorul
+"all_ages" raportate la data curenta. Pentru fiecare element din vector se 
+verifica intai daca ziua de nastere este mai mare decat ziua curenta. 
+In caz afirmativ, la ziua curenta se adauga numarul de zile corespunzator lunii 
+de nastere, iar valoarea lunii curente scade cu 1.
+Ulterior se verifica daca luna de nastere este mai mare decat luna curenta.
+In caz afirmativ, valoarea anului curent scade cu 1, iar valoarea lunii curente
+creste cu 12.
+In final, valoarea varstei(doar in ani) este data de diferenta dintre anul curent
+si anul de nastere.
+
+-------------------------------------------------------------------------------
+Columnar Transposition Cipher
+
+Functia "columnar_transposition" primeste ca parametrii vectorul de ordine al
+coloanelor, plaintextul si returneaza rezultatul codarii in ciphertext. Pentru a
+realiza acest lucru se face o parcurgere pe coloane a matricei si se adauga in 
+ordine in vectorul ciphertext. Pentru fiecare coloana, se calculeaza numarul de
+linii care trebuie parcurs deoarece nu toate  coloanele sunt "complete".
+
+-------------------------------------------------------------------------------
+Cache Load Simulation
+
+In functia "load" este simulata incarcarea datelor din memorie in registre, tinand
+cont de existenta cache-ului. Initial, se verifica daca datele solicitate exista deja
+in cache. Pentru acest lucru, se face o cautare a tag-ului(obtinut din adresa) in
+vectorul de taguri. Daca tag-ul nu se afla in in vector, ne aflam in cazul unui 
+CACHE MISS. Daca tag-ul se afla in vector, avem un CACHE HIT. In cazul CACHE MISS,
+datele sunt aduse intai in cache, iar apoi sunt transferate in registre. De asemenea, 
+tagul este adaugat in vectorul de taguri.  In cazul CACHE HIT, datele sunt preluate
+direct din cache.

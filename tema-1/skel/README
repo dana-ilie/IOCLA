@@ -1,0 +1,73 @@
+README - Ilie Dana Maria 324CA
+-----------------------------------------------------------------------------------------------------------
+In functia main se realizeaza apelarea functiilor corespunzatoare
+fiecarei comenzi primite de la stdin.
+------------------------------------------------------------------------------------------------------------
+Comanda "touch" apeleaza functia "touch", avand ca parametrii
+directorul curent si numele fisierului pe care dorim sa il cream. 
+In functie, se verifica(cu ajutorul functiei "check_name") daca numele
+fisierului exista deja. Daca nu exista, putem crea fisierul, alocandu-i
+memorie si adaugandu-l la finalul listei de fisiere a directorului curent.
+
+------------------------------------------------------------------------------------------------------------
+Comanda "mkdir" apeleaza functia "mkdir" , avand ca parametrii
+directorul curent si numele directorului pe care dorim sa-l cream.
+In functie, se verifica daca numele directorului exista deja. Daca nu
+exista, putem crea directorul, alocandu-i memorie si adaugand-ul 
+la finalul listei de directoare a directorului curent.
+
+------------------------------------------------------------------------------------------------------------
+Comanda "ls" apeleaza functia "ls" cu parametrul directorul curent.
+In functie, prima data se parcurge lista de directoare a directorului
+curent si se afiseaza numele fiecarui director din lista. Apoi, se 
+parcurge lista de fisiere a directorului curent si se afiseaza numele
+fiecarui fisier din lista.
+
+------------------------------------------------------------------------------------------------------------
+Comanda "rm" apeleaza functia "rm" cu parametrii directorul
+curent si numele fisierului pe care dorim sa-l eliminam. In functie, se
+verifica cu ajutorul functiei "check_file_name"  daca fisierul exista in 
+lista de fisiere a directorului curent. Daca exista, il stergem din lista, 
+eliberand memoria corespunzatoare acestuia.
+
+------------------------------------------------------------------------------------------------------------
+Comanda "rmdir" apeleaza functia "rmdir" cu parametrii directorul 
+curent si numele directorului pe care dorim sa-l eliminam.  Inainte de
+a se face apelarea se verifica daca numele directorului exista in lista 
+de directoare a directorului curent. Functia "rmdir" este o functie 
+recursiva care realizeaza eliminarea directorului cu numele primit ca 
+parametru, stergand toate fisierele si directoarele din acesta.
+
+------------------------------------------------------------------------------------------------------------
+Comanda "cd" apeleaza functia "cd" cu parametrii adresa directorului
+curent si un nume de director. Functia schimba directorul curent in
+directorul cu numele primit ca parametru(daca acesta exista in lista
+de directoare a directorului curent).
+
+------------------------------------------------------------------------------------------------------------
+Comanda "tree" apeleaza functia "tree", avand ca parametrii 
+directorul curent si un nivel, cu valoarea initiala 0.  Functia "tree" 
+este o functie recursiva, care afiseaza interiorul directorului curent 
+intr-o forma arborescenta.
+
+------------------------------------------------------------------------------------------------------------
+Comanda "pwd" apeleaza functia "pwd" cu parametrul directorul
+curent. Functia "pwd" intoarce calea de la directorul radacina(home) 
+pana la directorul curent, sub forma unui sir de caractere, care este 
+afisat la stdout.
+
+------------------------------------------------------------------------------------------------------------
+Comanda "stop" apeleaza functia "stop" pentru a elibera memoria
+programului si opreste aplicatia. 
+
+------------------------------------------------------------------------------------------------------------
+Comanda "mv" apeleaza functia "mv" cu parametrii directorul curent,
+numele directorului/fisierului al carui nume dorim sa-l schimbam si 
+numele nou. 
+
+------------------------------------------------------------------------------------------------------------
+
+
+
+
+
